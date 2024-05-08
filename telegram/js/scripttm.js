@@ -1,26 +1,25 @@
-"use strict"
+const form = document.querySelector("#form");
 
-const form = document.querySelector('.form');
-form.addEventListener('submit', function (e) {
+form.addEventListener("submit", (e) => {
   e.preventDefault();
-  sendMessage(form);
+
+  var Nombre = document.getElementById("Nombre").ariaValueMax;
+  var Correo = document.getElementById("Correo").ariaValueMax;
+
+  var my_text = ´Mensaje de formulario:%0A - Nombre:${Nombre} %0A Correo: ${Correo}´
+
+  var token = "7120335608:AAHZCcLcTa8hlLUYd_TWK6fBFBV63DarjvE";
+
+  var chat_id = -1002062098373
+  var url = ´https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${my_text}´
+
+
+
+  let api = new XMLHttpRequest();
+  api.open("GET", url, true );
+  api.send();
+
+
+  console.log("Mensaje enviado")
 
 })
-
-async function sendMessage(form) {
-  const formData = new FormData(form);
-  if (formData) {
-      const url = 'sendmessage.php';
-      const response = await fetch(url, {
-         method: "POST",
-         body: formData
-      });
-      
-  if (response.ok){
-       form.reset();
-       alert('Form sent!');
-    }else{
-      alert('Error');
-    } 
-  }
-}
