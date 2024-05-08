@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styletm.css"/>
+    <link rel="icon" href="imagenes/logo.png" type="imagenes/logo.png">
+    <title>ADNova Design Formlario</title>
+</head>
+
+<body>
+    
+
+ <div class="wrapper">
+     <main class="page">
+     <form action="https://formsubmit.co/agenciaadnovadesign@gmail.com" class="form" method="POST" />
+    
+    <h2>Formulario</h2>
+    <p>Llena los datos para subscribirte a nuestra seccion de noticias y mantenerte informado de nuestros proyectos y promociones.</p>
+    
+        
+        <div class="input-group">
+
+             <label for="message">Nombres</label>
+        <input type="text" name="Nombres" id="Nombres" placeholder="Nombre" required>
+        <br>
+
+        <label for="message">Apellidos</label>
+        <input type="text" name="Apellidos" id="Apellidos" placeholder="Apellidos" required>
+        <br>
+
+        <label for="phone">Teléfono</label>
+        <input type="tel" name="Telefono" id="Telefono" placeholder="Telefono" required>
+        <br>
+
+        <label for="email">Correo</label>
+        <input type="email" name="Email" id="Email" placeholder="Email" required>
+        <br>
+
+        <div class="form-txt">
+            <a href="#">Política de privacidad</a>
+            <a href="#">Términos y condiciones</a>
+        </div>
+
+        <input class="btn" type="submit" value="Subscribirme">
+
+        <input type="hidden" name="_next" value="https://adnova-design.github.io/ADNova/index.html">
+        <input type="hidden" name="_captcha" value="false">
+            
+        </div> 
+       </form>
+    </main>
+ </div>
+
+ 
+
+
+
+ document.getElementById('myForm').addEventListener('submit', function(event) {
+    var isValid = true;
+    var inputs = this.elements;
+    
+    for (var i = 0; i < inputs.length; i++) {
+        if (inputs[i].type === "text" || inputs[i].type === "email") {
+            if (!inputs[i].value) {
+                isValid = false;
+                alert('Por favor completa todos los campos');
+                break;
+            }
+        }
+    }
+    
+    if (!isValid) {
+        event.preventDefault();
+    }
+});
+</script>
+
+ <script src="js/scripttm.js"></script>
+
+
+</body>
+</html>  
