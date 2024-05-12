@@ -1,3 +1,18 @@
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+}
+
+@media (max-width: 1190px) {
+  .service_section {
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+}
+}
+
 @media (max-width: 1120px) {
   .footer_bg {
     margin-top: 0;
@@ -13,9 +28,9 @@
     display: none;
   }
 
-
-  .service_section {
-    background-size: cover;
+  .btn-box1 {
+    display: center;
+    margin-top: 120px;
   }
 
   .slider_section ol.carousel-indicators {
@@ -26,14 +41,15 @@
   .slider_img-box img {
     z-index: 1;
     position: relative;
+    
   }
 
   .slider_img-box {
-    position: relative;
+    position: top;
   }
 
   .slider_img-box::before {
-    background-image: url(../images/hero-bg-mobile.png);
+    background-image: url(../imagenes/hero-bg-mobile.png);
     width: 100%;
     height: 100%;
     content: "";
@@ -62,18 +78,74 @@
   .slider_section .carousel_btn-container {
     display: none;
   }
+
+  
+  .service_section {
+    background-size: cover;
+    padding: 20%;
+  }
 }
 
 @media (max-width: 768px) {
+  .welcome_section.img-box img {
+      width: 100%;
+    }
+  
+    
+  .slider_detail-box .btn-box a {
+    display: inline-block;
+    padding: 12px 40px;
+    background-color: #16BD79;
+    color: #f9fcfb;
+    border-radius: 25px;
+    -webkit-box-shadow: 0px 2px 7px 0px rgba(32, 50, 117, 0.26);
+    box-shadow: 0px 2px 7px 0px rgba(32, 50, 117, 0.26);
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    border: none;
+    margin: 35px 0 50px 0;
+  }
+  
+  .slider_detail-box .btn-box a:hover {
+    -webkit-transform: translateY(-7px);
+            transform: translateY(-7px);
+  }
+  
+  
+    .slider_img-box {
+      width: 75%;
+      margin-top: -100px;
+    }
+    
+    .slider_img-box img {
+      width: 100%;
+    }
+  }
+  
 
 
+@media (max-width: 768px) {
+  .logo {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    height: 200px;
+  }
 
+  .img_logo {
+    margin-top: 10%;
+    max-width: 100%;
+    max-height: 100%;
+  }
 
   .slider_section .carousel_btn-container {
     display: none;
   }
-
-
 
   .slider_section ol.carousel-indicators {
     margin: 0;
@@ -84,8 +156,23 @@
     right: 6%;
   }
 
+  .slider_img-box  {
+    padding: 10%;
+  }
   .slider_detail-box {
     text-align: center;
+    position: relative;
+    
+  }
+
+  .btn-box1 {
+    text-align: center;
+    position: absolute;
+    top: 220%;
+    left: 0;
+    right: 0;
+    bottom: -50px;
+    z-index: 2;
   }
 
   .info_section .form_container input {
@@ -148,28 +235,91 @@
     padding-top: 300px;
   }
 
-  .info_section .row>div {
+  .info_section .row > div {
     margin-bottom: 35px;
   }
-
+  
 }
 
-@media (max-width: 576px) {
 
+@media (max-width: 576px) {
 
   .slider_section ol.carousel-indicators {
     right: 0;
   }
-}
 
-@media (max-width: 480px) {}
-
-@media (max-width: 420px) {}
-
-@media (max-width: 360px) {}
-
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1170px;
+  .btn-box1 {
+    text-align: center;
+    position: absolute;
+    top: 170%;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    z-index: 2;
   }
 }
+  @media (max-width: 576px) {
+
+    .btn-box1 {
+      text-align: center;
+      position: absolute;
+      top: 200%;
+      left: 0;
+      right: 0;
+      bottom: -10px;
+      z-index: 2;
+    }
+  }  
+
+  @media (max-width: 500px) {
+
+    .btn-box1 {
+      text-align: center;
+      position: absolute;
+      top: 180%;
+      left: 0;
+      right: 0;
+      bottom: -10px;
+      z-index: 2;
+    }
+  } 
+
+  
+  @media (max-width: 480px) {
+
+    .btn-box1 {
+      text-align: center;
+      position: absolute;
+      top: 160%;
+      left: 0;
+      right: 0;
+      bottom: -10px;
+      z-index: 2;
+    }
+  } 
+  
+  @media (max-width: 370px) {
+
+    .btn-box1 {
+      text-align: center;
+      position: absolute;
+      top: 130%;
+      left: 0;
+      right: 0;
+      bottom: -10px;
+      z-index: 2;
+    }
+  }  
+
+  @media (max-width: 360px) {
+
+    .btn-box1 {
+      text-align: center;
+      position: absolute;
+      top: 120%;
+      left: 0;
+      right: 0;
+      bottom: -10px;
+      z-index: 2;
+    }
+  }  

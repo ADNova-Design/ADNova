@@ -200,7 +200,7 @@ img {
   vertical-align: middle;
   border-style: none;
   margin-top: 50px;
-  margin-left: 40%;
+  margin-left: 0%;
 }
 
 svg {
@@ -577,6 +577,13 @@ pre code {
 @media (min-width: 1200px) {
   .container {
     max-width: 1140px;
+  }
+  .img-box1{
+    vertical-align: middle;
+    border-style: none;
+    margin-top: 50px;
+    margin-left: 0%;
+
   }
 }
 

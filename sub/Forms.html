@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suscripción a noticias</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+    form {
+      width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input[type="text"],
+    input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Suscríbete a nuestro boletín de noticias</h1>
+  <form id="formulario">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="correo">Correo electrónico:</label>
+    <input type="email" id="correo" name="correo" required>
+
+    <button type="submit">Suscribirse</button>
+  </form>
+
+  <script>
+    const formulario = document.getElementById('formulario');
+
+    formulario.addEventListener('submit', (event) => {
+      event.preventDefault(); // Prevent default form submission
+
+      const nombre = document.getElementById('nombre').value;
+      const correo = document.getElementById('correo').value;
+
+      const emailBody = `Nuevo registro:
+        Nombre: ${nombre}
+        Correo electrónico: ${correo}`;
+
+      // Replace with your actual email address (consider privacy implications)
+      const recipientEmail = 'your_email@example.com';
+
+      fetch(`https://api.emailjs.com/api/v1.0/email/send`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          service_id: 'your_emailjs_service_id', // Replace with your service ID
+          template_id: 'your_emailjs_template_id', // Replace with your template ID
+          from_name: 'Suscripción a noticias',
+          to_name: 'Equipo de noticias',
+          reply_to: correo,
+          subject: 'Nueva suscripción',
+          text: emailBody
+        })
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.status === 'success') {
+          alert('¡Gracias por tu suscripción! Hemos recibido tu información.');
+          formulario.reset(); // Clear the form
+        } else {
+          alert('Hubo un error al enviar tu solicitud. Inténtalo de nuevo.');
+        }
+      })
+      .catch(error => {
+        console.error(error);
+        alert('Hubo un error al enviar tu solicitud. Inténtalo de nuevo.');
+      });
+    });
+  </script>
+</body>
+</html>

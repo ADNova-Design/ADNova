@@ -203,6 +203,15 @@ img {
   width: 150%;
 }
 
+
+img:logo {
+  vertical-align: middle;
+  border-style: none;
+  margin-top: 0px;
+  width: 150%;
+
+}
+
 svg {
   overflow: hidden;
   vertical-align: middle;
@@ -4240,15 +4249,6 @@ input[type="button"].btn-block {
   text-decoration: none;
 }
 
-.navbar-toggler-icon {
-  display: inline-block;
-  width: 1.5em;
-  height: 1.5em;
-  vertical-align: middle;
-  content: "";
-  background: no-repeat center center;
-  background-size: 100% 100%;
-}
 
 @media (max-width: 575.98px) {
   .navbar-expand-sm > .container,
@@ -4395,6 +4395,7 @@ input[type="button"].btn-block {
     -ms-flex-direction: row;
     flex-direction: row;
   }
+  
   .navbar-expand-xl .navbar-nav .dropdown-menu {
     position: absolute;
   }
