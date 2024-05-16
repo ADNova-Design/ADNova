@@ -1,0 +1,218 @@
+  /* Estilos generales */
+  @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+body
+
+  {
+    display: contents;
+    margin: 1px;
+    margin-top: ;
+    margin-right: ;
+    margin-bottom: ;
+    margin-left: ;
+}
+
+  
+/*header section*/
+.sub_page .hero_area {
+  height: auto;
+}
+
+.hero_area {
+  height: 94vh;
+  background: -webkit-gradient(linear, left top, right top, from(#864ddf), to(#203376));
+  background: linear-gradient(to right, #864ddf, #203376);
+}
+
+.hero_area {
+  height: auto;
+}
+
+
+.container-fluid {
+  width: 90%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.logo {
+  align-items: left;
+  margin-top: -10% ;
+  width: 100px;
+  height: 100px;
+}
+.img_logo {
+  width: 50px;
+  padding: 5%;
+}
+img:logo {
+  vertical-align: middle;
+  border-style: none;
+  margin-top: 0px;
+  width: 150%;
+
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.container {
+  min-width: 992px !important;
+}
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    color: #0c0c0c;
+    background-color: #ffffff;
+    align-items: center;
+    justify-content: center;
+  }
+
+  form {
+    padding: 5%;
+  
+   }
+
+  h2 {
+    color: black;
+    font-size: 35px;
+    text-align: center;
+    padding-bottom: 5%;
+  }
+
+  p {
+    color: black;
+    font-size: 15px;
+    text-align: justify;
+  }
+
+  .form-txt {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .form-txt a {
+    color: #76b28e;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+ /* Estilos específicos de las imágenes */
+ 
+
+ .input-group {
+  display: flex;
+  justify-content: center;
+  margin-left: 80px;
+  padding-bottom: 1%;
+}
+
+
+ .image-card {
+  flex: 1;
+}
+
+.image1 {
+  padding: 5%;
+  width: 35%;
+  height: auto;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+.image2
+{
+  padding: 5%;
+  width: 40%;
+  height: auto;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+.image3
+{
+  padding: 3%;
+  width: 45%;
+  height: auto;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.image4 {
+  padding: 5%;
+  width: 40%;
+  height: auto;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.image1:hover,
+.image2:hover,
+.image3:hover,
+.image4:hover,
+.image5:hover {
+  background-color: #16BD79;
+}
+
+.image1 a,
+.image2 a,
+.image3 a,
+.image4 a,
+.image5 a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+
+  @media(max-width: 991px) {
+    body {
+      padding: 30px;
+    }
+
+    form {
+      padding: 50px 30px;
+      width: 100%;
+    }
+
+   input {
+      padding: 15px;
+    }
+  }
+
+  
+@media (max-width: 567px) {
+  .hero_area {
+    display: none;
+  }
+  
+  h2{
+    padding: 15%;
+  }
+  body {
+    padding: 20%;
+  }
+
+  form {
+    padding: 50px 30px;
+    width: 100%;
+  }
+
+  .input-group {
+    flex-direction: column;
+  }
+
+  .image-card {
+    align-items: center;
+    margin-left: 15%;
+    margin-bottom: 10px;
+  }
+}
