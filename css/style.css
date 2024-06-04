@@ -766,8 +766,7 @@ text-align: justify;
 /* end footer section*/
 /*# sourceMappingURL=style.css.map */
 
-
-
+/* mensaje de suscripcion enviada*/
 #subscriptionNotification {
   position: fixed;
   top: 0;
@@ -776,12 +775,11 @@ text-align: justify;
   z-index: 9999;
 }
 
-
 #subscriptionNotification {
   position: fixed;
   top: 20%;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 0;
+  transform: translateX(100%);
   z-index: 9999;
   background-color: #f8f9fa;
   color: #212529;
@@ -791,25 +789,17 @@ text-align: justify;
   text-align: center;
   font-family: "Poppins", sans-serif;
   font-size: 12px;
+  transition: transform 0.5s ease;
+}
+
+#subscriptionNotification.show {
+  transform: translateX(-50%);
 }
 
 #subscriptionNotification p {
   margin: 0;
 }
 
-#subscriptionNotification button {
-  margin-left: 0px;
-  background-color: none;
-  color: none;
-  border: none;
-  padding: 0;
-  border-radius: 0;
-  cursor: pointer;
-}
-
-#subscriptionNotification button:hover {
-  background-color: none;
-}
 
 
 .colorido{
