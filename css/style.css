@@ -798,15 +798,37 @@ text-align: justify;
 }
 
 #subscriptionNotification button {
-  margin-left: 10px;
+  margin-left: 0px;
   background-color: none;
-  color: #fff;
+  color: none;
   border: none;
-  padding: 5px 10px;
-  border-radius: 4px;
+  padding: 0;
+  border-radius: 0;
   cursor: pointer;
 }
 
 #subscriptionNotification button:hover {
   background-color: none;
+}
+
+
+.colorido{
+  background: linear-gradient(-45deg, #ffffff, #16BD79, #FFFFFF, #16BD79 );
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: cambioColores 15s infinite;
+}
+
+
+@keyframes cambioColores {
+  10% {
+    background-position: 0%;
+  }
+  50% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: 0%;
+  }
 }
