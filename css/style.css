@@ -765,3 +765,48 @@ text-align: justify;
 
 /* end footer section*/
 /*# sourceMappingURL=style.css.map */
+
+
+
+#subscriptionNotification {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+}
+
+
+#subscriptionNotification {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  background-color: #f8f9fa;
+  color: #212529;
+  padding: 19px;
+  border-bottom: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+}
+
+#subscriptionNotification p {
+  margin: 0;
+}
+
+#subscriptionNotification button {
+  margin-left: 10px;
+  background-color: none;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#subscriptionNotification button:hover {
+  background-color: none;
+}

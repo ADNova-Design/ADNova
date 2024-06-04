@@ -1,43 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <title>Proceso de Pago</title>
 
-    <!DOCTYPE html>
-    <html>
-        <head>
-        <meta charset="utf-8"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-        <meta name="keywords" content=""/>
-        <meta name="description" content=""/>
-        <meta name="author" content=""/>
-        <title>ADNova Design</title>
-        <link href="https://fonts.googleapis.com/css?family=Dosis:400,500|Poppins:400,700&amp;display=swap" rel="stylesheet"/>
-        <link rel="stylesheet" href="styletm.css"/>
-
+    <link rel="stylesheet" href="styletm.css"/>
+    
+    <div class="hero_area">
+      <!-- header section strats -->
+      <header class="header_section">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-8">
+              <nav class="navbar navbar-expand-lg custom_nav-container ">
+                <a class="navbar-brand" href="index.html">
+                  <span>
+                    <a class="logo" href="https://adnova-design.github.io/ADNova/index.html#inicio">
+                      <img class="img_logo"src="img/logo.png" alt="Logo de mi empresa">
+                    </a>
+                  </span>
+                </a>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- end header section -->
+    </div>
 </head>
-
 <body>
- 
-    <main>  
-        <form>
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Nombre</label>
-              <input type="text" class="form-control" id="Nombre" aria-describedby="emailHelp">
-            </div>
-            
-            <div class="mb-3">
-              <label for="email" class="form-label">Correo</label>
-              <input type="email" class="form-control" id="Correo">
-            </div>
-            <select id="codigo de pais" name="codigo de pais" required>
-             <option value="">Selecciona el pais</option>
-             <option value="+53">Cuba</option>
-             <option value="+01">Estados Unidos </option>
-            </select>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
 
-    </main>
-   
+ <form id="paymentForm">
+    <h1>Pago por Transfermovil</h1>      
+      <div class="container">
+        <div class="col1">
+          <div class="qrTM">
+            <img class="qrTMimg" src="img/qrTM.png">
+          </div>
+          <div class="bandec">
+            <h2>
+          <img src="https://th.bing.com/th/id/R.6cfbe230f72ccdd21aacd3870d94a3ee?rik=H6%2bTEhTESN7W1A&amp;pid=ImgRaw&amp;r=0">
+    9204-0699-9818-9625</h2> 
+           </div>
+          <p>
+            Debe escanear el siguiente código QR con su aplicación de Transfermovil para realizar la transferencia a nuestra cuenta o copie nuestro número de cuenta.
+          </p>
+        </div>
+        <div class="col2">
+          <label>Nombres y Apellidos</label>
+          <input id="nombre" class="nombre" type="text" placeholder="Nombres Apellidos" required/>
+          <label>Teléfono</label>
+          <input id="telefono" class="telefono" type="text" placeholder="+53 59585715" required/>
+          <label>Correo Gmail</label>
+          <input id="correo" class="correo" type="email" placeholder="nombre@gmail.com" />
+          <label>Nro. Transacción</label>
+          <input id="numerotrans" class="numerotrans" type="text" placeholder="V241320000OYA" required/>
+          <button class="buy">Procesar solicitud</button>
+        </div>
+      </div>
+  </form>
+  
+  <script>
+      document.getElementById('paymentForm').addEventListener('submit', function(event) {
+          event.preventDefault();
+  
+          var nombre = document.getElementById('nombre').value;
+          var telefono = document.getElementById('telefono').value;
+          var correo = document.getElementById('correo').value;
+          var numerotrans = document.getElementById('numerotrans').value;
+  
+          var botToken = '7120335608:AAHZCcLcTa8hlLUYd_TWK6fBFBV63DarjvE';
+          var chatId = '-1002062098373';
+  
+          var text = 'NUEVA SOLICITUD:\n' +
+                     'PAGO X TRANSFERMOVIL\n\n' +
+                     'Nombres y Apellidos:\n' + nombre + '\n' +
+                     'Número de Teléfono:\n' + telefono + '\n' +
+                     'Correo Gmail:\n' + correo + '\n' +
+                     'Nro. Transacción:\n' + numerotrans;
+  
+          fetch('https://api.telegram.org/bot' + botToken + '/sendMessage?chat_id=' + chatId + '&text=' + encodeURIComponent(text));
+          
+          
+          document.getElementById('paymentForm').reset();
+     
+// Redirigir al usuario inmediatamente
+window.location.href = 'https://adnova-design.github.io/ADNova/index.html#inicio';
+
+});
+
+</script>
 
 </body>
-<script src="script.js"></script>
-</html>  
+</html>

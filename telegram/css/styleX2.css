@@ -1,0 +1,146 @@
+body {
+  font-family: "Poppins", sans-serif;
+  color: #0c0c0c;
+  background-color: #ffffff;
+}
+
+.layout_padding {
+  padding: 75px 0;
+}
+
+.layout_padding2 {
+  padding: 45px 0;
+}
+
+.layout_padding2-top {
+  padding-top: 45px;
+}
+
+.layout_padding2-bottom {
+  padding-bottom: 45px;
+}
+
+.layout_padding-top {
+  padding-top: 75px;
+}
+
+.layout_padding-bottom {
+  padding-bottom: 75px;
+}
+
+.navbar-nav {
+  padding: 20px 20px;
+  padding-left: 230px;
+  padding-right: 100px;
+}
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #16BD79;
+    -webkit-transform: translateY(-7px);
+            transform: translateY(-7px);
+  }
+
+.btn,
+.btn:focus {
+  outline: none !important;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+
+
+.welcome_section {
+  text-align: center;
+}
+
+
+.welcome_section .img-box {
+  width: 65%;
+  padding-left: 25%;
+}
+.welcome_section.img-box img {
+  margin-top: 45px;
+
+}
+
+
+.welcome_section .detail-box {
+  margin-top: 5%;
+}
+
+.welcome_section .detail-box a {
+  display: inline-block;
+  padding: 12px 40px;
+  background-color: #16BD79;
+  color: #f9fcfb;
+  border-radius: 25px;
+  -webkit-box-shadow: 0px 2px 7px 0px rgba(32, 50, 117, 0.26);
+  box-shadow: 0px 2px 7px 0px rgba(32, 50, 117, 0.26);
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  border: none;
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+
+.welcome_section .detail-box a:hover {
+  background-color: #8B59FE;
+  -webkit-transform: translateY(-7px);
+          transform: translateY(-7px);
+}
+
+@media (max-width: 1080px) {
+  
+.welcome_section .img-box {
+  width: 65%;
+  padding-left: 10%;
+}
+
+.welcome_section.img-box img {
+  margin-top: 0px;
+}
+
+.welcome_section .detail-box {
+  margin-top: 5%;
+}
+  
+}
+
+@media (max-width: 768px) {
+.img-box img {
+    width: 150%;
+  }
+
+
+.welcome_section .detail-box {
+  margin-top: 50px;
+}
+
+.welcome_section .detail-box a {
+  display: inline-block;
+  padding: 12px 40px;
+  background-color: #16BD79;
+  color: #f9fcfb;
+  border-radius: 25px;
+  -webkit-box-shadow: 0px 2px 7px 0px rgba(32, 50, 117, 0.26);
+  box-shadow: 0px 2px 7px 0px rgba(32, 50, 117, 0.26);
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  border: none;
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+
+.welcome_section .detail-box a:hover {
+  background-color: #8B59FE;
+  -webkit-transform: translateY(-7px);
+          transform: translateY(-7px);
+}
+}
