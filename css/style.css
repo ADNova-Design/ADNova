@@ -10,9 +10,10 @@ body {
   height: 100px;
 }
 
-.img_logo{
-  width: 80px;
-  padding: 0;
+.img_logo {
+    margin-top: 70%;
+    /* width: 80px; */
+    padding: 0;
 }
 
 
