@@ -13,7 +13,7 @@ body {
 .img_logo {
     margin-top: 70%;
     /* width: 80px; */
-    padding: 6%;
+    padding: 0;
 }
 
 
@@ -51,7 +51,7 @@ body {
 }
 
 .custom_heading-container h2 {
-  margin-top: 25px;
+  margin-top: 55px;
   font-weight: bold;
   border-bottom: 1px solid #16BD79;
   padding-bottom: 2px;
